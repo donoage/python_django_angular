@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Zipari Sample</title>
+    <script src="{% static 'dist/js/bundle.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'node_modules/angular-material/angular-material.css' %}">
+    <base href="/">
+</head>
+<body>
+<div>
+    <md-toolbar class="md-padding">
+        <h1 style="padding-left: 16px">Zipari</h1>
+    </md-toolbar>
+    <md-content class="">
+        <md-nav-bar
+                md-selected-nav-item="currentNavItem"
+                nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-href="#/" name="home">API</md-nav-item>
+            <md-nav-item md-nav-href="#insurance" name="insurance">Insurance</md-nav-item>
+        </md-nav-bar>
+    </md-content>
+    <div ng-view></div>
+</div>
+</body>
+</html>  

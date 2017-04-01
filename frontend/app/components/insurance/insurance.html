@@ -1,0 +1,54 @@
+<div ng-controller="InsuranceListController as ctrl" ng-init="ctrl.init()" ng-cloak>
+
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="30" layout="column">
+            <form ng-submit="ctrl.save(insurance)">
+                <md-content layout="column" layout-padding>
+                    <md-input-container layout="column">
+                        <label>Title</label>
+                        <input ng-model="insurance.title">
+                    </md-input-container>
+
+                    <md-input-container layout="column">
+                        <label>Description</label>
+                        <input ng-model="insurance.description">
+                    </md-input-container>
+                </md-content>
+                <md-button layout="column"
+                           ng-controller="UIController"
+                           class="md-raised md-warn"
+                           type="submit">
+                    add new
+                </md-button>
+            </form>
+        </div>
+        <div flex-xs flex-gt-xs="70" layout="column">
+            <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch
+                     ng-repeat="insurance in ctrl.Insurances">
+                <md-card-title ng-hide="editing">
+                    <md-card-title-text>
+                        <span class="md-headline" ng-hide="editing"
+                              ng-click="editing = true">{{ insurance.title }}</span>
+                        <span class="md-subhead" ng-hide="editing"
+                              ng-click="editing = true">{{ insurance.description }}</span>
+
+                    </md-card-title-text>
+                </md-card-title>
+                <form ng-show="editing" ng-submit="editing = false" layout-padding>
+                    <md-input-container class="md-block">
+                        <label>Title</label>
+                        <input ng-model="insurance.title" ng-required/>
+                    </md-input-container>
+                    <md-input-container md-no-float="" class="md-block" layout-padding>
+                        <label>Description</label>
+                        <input ng-model="insurance.description" ng-required/>
+                    </md-input-container>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="ctrl.update(insurance)">Update</md-button>
+                        <md-button ng-click="ctrl.delete(insurance.id)">Delete</md-button>
+                    </md-card-actions>
+                </form>
+            </md-card>
+        </div>
+    </md-content>
+</div>  
