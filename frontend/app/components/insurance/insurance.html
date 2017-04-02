@@ -31,9 +31,11 @@
                               ng-click="editing = true">{{ insurance.title }}</span>
                         <span class="md-subhead" ng-hide="editing"
                               ng-click="editing = true">{{ insurance.description }}</span>
-
                     </md-card-title-text>
                 </md-card-title>
+                <md-card-actions layout="row" layout-align="end center" ng-hide="editing">
+                    <md-button ng-click="editing = true">edit</md-button>
+                </md-card-actions>
                 <form ng-show="editing" ng-submit="editing = false" layout-padding>
                     <md-input-container class="md-block">
                         <label>Title</label>
