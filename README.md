@@ -10,7 +10,8 @@
 
 ## Getting started
 
-##### Starting backend server,
+#### Starting backend server
+
 from `root/`,
 ```
 $ mkvirtualenv mysite
@@ -22,7 +23,8 @@ $ sudo pip install -r backend/requirements.txt
 $ python manage.py runserver --setting=zipari.settings.dev
 ```
 
-##### Bundling up frontend package,
+#### Bundling up frontend package
+
 from `frontend/`
 ```
 $ npm install
@@ -31,7 +33,8 @@ $ npm install
 $ webpack
 ```
 
-##### Setting up your DB
+#### Setting up your DB
+
 In `root/zipari/settings/base.py`
 
 Modify this block to your db setting,
@@ -48,13 +51,6 @@ DATABASES = {
 }
 ```
 
-##### When ready
+## Ready?
 
 The app can be viewed at `http://127.0.0.1:8000/`
-
-
-
-
-
-
-
