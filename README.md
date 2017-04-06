@@ -1,7 +1,6 @@
 ## Pre-reqs
 - Python 2.x
-- a virtual Python environment (See step 0)
-- Django 1.9.x (pip install django)
+- a virtual Python environment
 - npm 2.15.8+
 - Webpack 1.13.x (sudo npm i -g webpack)
 - ESLint 2.13.1+ (sudo npm i -g eslint)
@@ -17,7 +16,7 @@ from `root/`,
 $ mkvirtualenv mysite
 ```
 ```
-$ sudo pip install -r backend/requirements.txt
+$ sudo pip install -r requirements.txt
 ```
 ```
 $ python manage.py runserver --setting=zipari.settings.dev
