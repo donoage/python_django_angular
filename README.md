@@ -1,4 +1,6 @@
 ## Pre-reqs
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/donoage/python_django_angular.svg)](https://greenkeeper.io/)
 - Python 2.x
 - a virtual Python environment
 - npm 2.15.8+
